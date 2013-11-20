@@ -5,13 +5,18 @@ Optional TF2 Taunts available [here](http://github.com/captain-lightning/Sound-A
 
 ### Installation
 - To install, move soundoff.py into %appdata%/HexChat/addons for Windows, ~/.config/HexChat/addons for linux. Once there, it will load automatically.
+- Move alert sounds into share/sounds within Hexchat's install folder or specify your own sounds folder with "/soundalert set <path>", see Usage.
 
 ### Requirements
 - Python scripting interface plugin.
 - Xine, for linux users.
 
-### Usage
-- Defaults to the share/sounds directory within Hexchat's install directory, which it will automatically search for. If you wish to use a different directory, set it with "/soundalert set C:\My Special Directory\Sounds_Galore\Spaces Are Okay"
-- Move whatever sounds you want played into either of the above directories.
-- Supports only .wav in Windows.
+### Features
 - Plays all formats Xine does in Linux. (AAC, AC3, ALAC, AMR, FLAC, MP3, RealAudio, Shorten, Speex, Vorbis, WMA)
+- Plays only .wav in Windows.
+- Automatically searches for and plays from the share/sounds folder within Hexchat's install directory by default.
+
+### Usage
+- /soundalert set \<path> -- Specifies a directory to play sounds from.
+- /alertson -- Turns on alerts. Enabled by default.
+- /alertsoff -- Disables alerts until re-enabled.
