@@ -120,8 +120,7 @@ class SoundAlert():
       hexchat.prnt("Could not find default share/sounds directory, and no sounds directory is specified. See /help soundalert.")
 
     if os.name == "nt":
-      winsound.PlaySound(sound, winsound.SND_FILENAME)
-      #winsound.PlaySound(sound, winsound.SND_FILENAME ^ winsound.SND_ASYNC)
+      winsound.PlaySound(sound, winsound.SND_FILENAME ^ winsound.SND_ASYNC)
 
     elif os.name == "posix":
       xine = pyxine.Xine()
