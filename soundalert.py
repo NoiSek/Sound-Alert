@@ -2,7 +2,7 @@ import hexchat, sys, os, random
 from threading import Thread
 
 __module_name__ = "Sound Alert" 
-__module_version__ = "4.4.1"
+__module_version__ = "4.4.2"
 __module_description__ = "Plays a random sound on alert from Hexchat/share/sounds \
 by default or the directory specified by \"/soundalert set my_sounds/directory\""
 
@@ -82,7 +82,7 @@ class SoundAlert():
 
     else:
       if os.name == "nt":
-        paths = ["C:\\Program Files\\HexChat\\share\\sounds", "C:\\Program Files (x86)\\HexChat\\share\\sounds", "%appdata%\\HexChat\\sounds"]
+        paths = ["C:\\Program Files\\HexChat\\share\\sounds", "C:\\Program Files (x86)\\HexChat\\share\\sounds", "{}\\HexChat\\sounds".format(os.getenv('appdata'))]
 
       elif os.name == "posix":
         paths = ["/sbin/HexChat/share/sounds", "/usr/sbin/HexChat/share/sounds", "/usr/local/bin/HexChat/share/sounds"]
